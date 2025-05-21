@@ -38,18 +38,18 @@ function getCookie(c_name){
 }
 // request
 // axios的拦截器   jwt+spring security
-axios.interceptors.request.use(config => {
-  // jwt令牌
-  var token= getCookie("token");
-  window.console.log(token);
-  if (token !=undefined) {
-    config.headers['Authorization'] = token; // 让每个请求携带自定义token 请根据实际情况自行修改
-  } 
-  return config
-}, error => {
-  // Do something with request error
-  Promise.reject(error)
-})
+// axios.interceptors.request.use(config => {
+//   // jwt令牌
+//   var token= getCookie("token");
+//   window.console.log(token);
+//   if (token !=undefined) {
+//     config.headers['Authorization'] = token; // 让每个请求携带自定义token 请根据实际情况自行修改
+//   } 
+//   return config
+// }, error => {
+//   // Do something with request error
+//   Promise.reject(error)
+// })
 
 
 
